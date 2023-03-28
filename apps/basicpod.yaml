@@ -3,10 +3,13 @@ kind: Pod
 metadata:
   name: webapp
   namespace: devproject
+  labels: #to map it with the service
+    app: web
+    env: dev
 spec:
   containers:
     - name: webcon
-      image: sudarshanlnx/2022sundayweb:v1
+      image: sudarshanlnx/farmfresh:v1
       imagePullPolicy: Always
       ports:
         - containerPort: 80
