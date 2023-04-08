@@ -17,12 +17,12 @@ spec:
         env: dev
     spec:
       containers:
-        - image: sudarshanlnx/farmfresh:v1
+        - image: scorpneedhi/springapp:v1
           name: webcon
           imagePullPolicy: Always
           ports:
             -  name: apache
-               containerPort: 80
+               containerPort: 8080
                protocol: TCP
           resources:
             requests:
@@ -41,7 +41,7 @@ spec:
   ports:
     - name: apache
       port: 80 #service port
-      targetPort: 80 #container port
+      targetPort: 8080 #container port
       protocol: TCP
   selector:     #mapping to pod
     apptype: web

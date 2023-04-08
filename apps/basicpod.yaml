@@ -9,10 +9,10 @@ metadata:
 spec:
   containers:
     - name: webcon
-      image: sudarshanlnx/farmfresh:v1
+      image: scorpneedhi/springapp:v1
       imagePullPolicy: Always
       ports:
-        - containerPort: 80
+        - containerPort: 8080
           name: apache
           protocol: TCP
       resources:

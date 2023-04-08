@@ -9,10 +9,10 @@ metadata:
 spec:
   containers:
     - name: webcon
-      image: sudarshanlnx/farmfresh:v1
+      image: scorpneedhi/springapp:v1
       imagePullPolicy: Always
       ports:
-        - containerPort: 80
+        - containerPort: 8080
           name: apache
           protocol: TCP
       resources:
@@ -35,7 +35,7 @@ spec:
     - name: apache
       nodePort: 30002 #node port mention the same in security group
       port: 80 #service port
-      targetPort: 80 #container port
+      targetPort: 8080 #container port
       protocol: TCP
   selector:     #mapping to pod
     app: web
